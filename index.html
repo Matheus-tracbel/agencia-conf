@@ -47,6 +47,16 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K057YDMEZE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K057YDMEZE');
+  </script>
+  <!-- End Google Analytics 4 -->
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -763,6 +773,9 @@
       function track(label){
         if (typeof fbq === 'function') {
           fbq('track', 'Lead', { content_name: label });
+        }
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', { method: label });
         }
       }
       document.querySelectorAll('a[href*="wa.me"], a[href^="https://wa.me"]').forEach(function(a){
