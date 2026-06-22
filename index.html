@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agência Conf — Marketing + Tecnologia para o seu crescimento</title>
+  <meta name="description" content="Agência Conf une Tráfego Pago, Tecnologia, Automação e Dados para gerar crescimento sustentável. Solicite seu diagnóstico gratuito." />
+  <link rel="canonical" href="https://matheus-tracbel.github.io/agencia-conf/" />
+  <meta name="theme-color" content="#0B0B0B" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="apple-touch-icon" href="logo.svg" />
+
+  <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Agência Conf" />
+  <meta property="og:url" content="https://matheus-tracbel.github.io/agencia-conf/" />
+  <meta property="og:title" content="Agência Conf — Marketing + Tecnologia para o seu crescimento" />
+  <meta property="og:description" content="Unimos Tráfego Pago, Tecnologia, Automação e Dados para gerar crescimento sustentável. Solicite seu diagnóstico gratuito." />
+  <meta property="og:image" content="https://matheus-tracbel.github.io/agencia-conf/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Agência Conf — Marketing + Tecnologia para o seu crescimento" />
+  <meta name="twitter:description" content="Unimos Tráfego Pago, Tecnologia, Automação e Dados para gerar crescimento sustentável. Solicite seu diagnóstico gratuito." />
+  <meta name="twitter:image" content="https://matheus-tracbel.github.io/agencia-conf/og-image.png" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '8594997327256712');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=8594997327256712&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#0B0B0B',
+            ink2:   '#111114',
+            purple: '#6C2BD9',
+            purpleHi:'#8B5CF6',
+            orange: '#FF7A00',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            glow: '0 0 60px -15px rgba(108,43,217,0.55)',
+            glowOrange: '0 0 50px -15px rgba(255,122,0,0.45)',
+          },
+          keyframes: {
+            floaty: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
+            shine:  { '0%': { backgroundPosition: '0% 50%' }, '100%': { backgroundPosition: '200% 50%' } },
+          },
+          animation: {
+            floaty: 'floaty 6s ease-in-out infinite',
+            shine:  'shine 6s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    html, body { background: #0B0B0B; }
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* Gradient text */
+    .grad-text {
+      background: linear-gradient(90deg, #fff 0%, #c4b5fd 40%, #8B5CF6 70%, #FF7A00 110%);
+      background-size: 200% auto;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Subtle grid backdrop */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+    }
+
+    /* Glass card */
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+    .glass:hover { border-color: rgba(139,92,246,0.45); }
+
+    /* Card glow follow */
+    .card-hover { transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s, border-color .35s; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 60px -20px rgba(108,43,217,0.55); }
+
+    ::selection { background: #6C2BD9; color: #fff; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    
+    /* Chat widget */
+    .conf-chat-btn { position: fixed; right: 1rem; bottom: 1rem; z-index: 60; }
+    .conf-chat-panel { position: fixed; right: 1rem; bottom: 5.5rem; width: 360px; max-width: calc(100% - 2rem); z-index:70; display:none; }
+    .conf-chat-panel.open { display:block; }
+    .conf-chat-messages { max-height: 320px; overflow:auto; padding: 1rem; }
+    .conf-msg { margin-bottom: 0.6rem; padding: 0.6rem 0.9rem; border-radius: 12px; display:inline-block; }
+    .conf-msg.user { background: rgba(255,255,255,0.08); color: #fff; }
+    .conf-msg.bot { background: rgba(255,255,255,0.04); color:#fff; border:1px solid rgba(255,255,255,0.04); }
+    .conf-quick-btns { display: flex; flex-wrap: wrap; gap: 6px; padding: 1rem; }
+    .conf-quick-btn { flex: 1; min-width: 120px; padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 12px; cursor: pointer; transition: all 0.2s; }
+    .conf-quick-btn:hover { background: rgba(139,92,246,0.3); border-color: rgba(139,92,246,0.6); }
+  </style>
+</head>
+
+<body class="font-sans text-white/90 antialiased selection:bg-purple">
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <img src="logo.svg" alt="Conf" class="w-9 h-9 shadow-glow rounded-xl" />
+        <span class="font-extrabold tracking-tight text-lg">Agência <span class="text-purpleHi">Conf</span></span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/70">
+        <li><a href="#diferenciais" class="hover:text-white transition">Diferenciais</a></li>
+        <li><a href="#servicos" class="hover:text-white transition">Serviços</a></li>
+        <li><a href="#processo" class="hover:text-white transition">Processo</a></li>
+        <li><a href="#cases" class="hover:text-white transition">Cases</a></li>
+        <li><a href="#sobre" class="hover:text-white transition">Sobre</a></li>
+      </ul>
+
+      <a href="https://wa.me/5517997375384?text=Ol%C3%A1!%20Quero%20um%20diagn%C3%B3stico%20gratuito%20da%20Ag%C3%AAncia%20Conf."
+         target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center gap-2 rounded-full bg-white text-ink font-semibold text-sm px-5 py-2.5 hover:bg-white/90 transition shadow-lg">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.516 5.26l-.999 3.648 3.973-1.087z"/></svg>
+        WhatsApp
+      </a>
+
+      <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10 bg-ink/95 backdrop-blur-xl">
+      <div class="px-6 py-5 flex flex-col gap-4 text-white/80 font-medium">
+        <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+        <a href="#servicos" class="mobile-link">Serviços</a>
+        <a href="#processo" class="mobile-link">Processo</a>
+        <a href="#cases" class="mobile-link">Cases</a>
+        <a href="#sobre" class="mobile-link">Sobre</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="relative overflow-hidden pt-32 sm:pt-44 pb-24 sm:pb-32">
+    <!-- backdrop -->
+    <div class="absolute inset-0 grid-bg"></div>
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[820px] h-[820px] rounded-full bg-purple/25 blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-40 -right-32 w-[420px] h-[420px] rounded-full bg-orange/15 blur-[120px] pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-8 text-center">
+      <div class="reveal inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs sm:text-sm text-white/70 mb-8">
+        <span class="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
+        Marketing + Tecnologia + Automação + Dados
+      </div>
+
+      <h1 class="reveal text-4xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight max-w-4xl mx-auto">
+        Sua empresa crescendo de verdade no <span class="grad-text animate-shine">digital</span>.
+      </h1>
+
+      <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+        Unimos tráfego pago, tecnologia, automação e dados para transformar o digital da sua empresa em uma máquina previsível de crescimento e resultados.
+      </p>
+
+      <div class="reveal mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/5517997375384?text=Ol%C3%A1!%20Quero%20solicitar%20um%20diagn%C3%B3stico%20gratuito."
+           target="_blank" rel="noopener"
+           class="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple to-purpleHi px-8 py-4 font-semibold text-white shadow-glow hover:shadow-[0_0_70px_-10px_rgba(108,43,217,0.8)] hover:-translate-y-0.5 transition-all">
+          Solicitar Diagnóstico
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
+        </a>
+      </div>
+
+      <!-- stat strip -->
+      <div class="reveal mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/10">
+        <div class="bg-white/[0.03] p-5">
+          <div class="text-2xl sm:text-3xl font-black text-white">+120</div>
+          <div class="text-xs text-white/50 mt-1">Projetos entregues</div>
+        </div>
+        <div class="bg-white/[0.03] p-5">
+          <div class="text-2xl sm:text-3xl font-black text-purpleHi">9</div>
+          <div class="text-xs text-white/50 mt-1">Soluções integradas</div>
+        </div>
+        <div class="bg-white/[0.03] p-5">
+          <div class="text-2xl sm:text-3xl font-black text-orange">3x</div>
+          <div class="text-xs text-white/50 mt-1">Mais leads em média</div>
+        </div>
+        <div class="bg-white/[0.03] p-5">
+          <div class="text-2xl sm:text-3xl font-black text-white">24h</div>
+          <div class="text-xs text-white/50 mt-1">Para te responder</div>
+        </div>
+      </div>
+
+      <!-- brand row -->
+      <p class="reveal mt-14 text-xs uppercase tracking-[0.25em] text-white/30">Ecossistema de tecnologia que usamos</p>
+      <div class="reveal mt-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-white/40 font-semibold text-sm">
+        <span>Google Ads</span><span>Meta</span><span>HubSpot</span><span>Power BI</span><span>n8n</span><span>Shopify</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIFERENCIAIS ============ -->
+  <section id="diferenciais" class="relative py-24 sm:py-32 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="max-w-2xl">
+        <p class="reveal text-orange font-semibold text-sm tracking-wide uppercase mb-3">Por que a Conf</p>
+        <h2 class="reveal text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+          Quatro forças em uma só agência.
+        </h2>
+        <p class="reveal mt-4 text-white/60 text-lg">
+          A maioria das agências faz apenas marketing. Nós unimos marketing, tecnologia, automação e dados — o que falta para o crescimento ser realmente sustentável.
+        </p>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="reveal glass card-hover rounded-2xl p-7">
+          <div class="w-12 h-12 grid place-items-center rounded-xl bg-purple/20 text-purpleHi mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 7-8M21 7h-4M21 7v4"/></svg>
+          </div>
+          <h3 class="font-bold text-lg">Marketing</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Estratégia e tráfego pago que atraem o cliente certo e geram demanda real.</p>
+        </div>
+        <div class="reveal glass card-hover rounded-2xl p-7">
+          <div class="w-12 h-12 grid place-items-center rounded-xl bg-orange/20 text-orange mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg>
+          </div>
+          <h3 class="font-bold text-lg">Tecnologia</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Sites, apps e sistemas sob medida, rápidos e prontos para escalar.</p>
+        </div>
+        <div class="reveal glass card-hover rounded-2xl p-7">
+          <div class="w-12 h-12 grid place-items-center rounded-xl bg-purple/20 text-purpleHi mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v3m0 12v3m9-9h-3M6 12H3m13.5-6.5l-2 2m-7 7l-2 2m11 0l-2-2m-7-7l-2-2"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </div>
+          <h3 class="font-bold text-lg">Automação</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Processos e atendimento automatizados que economizam tempo e ganham escala.</p>
+        </div>
+        <div class="reveal glass card-hover rounded-2xl p-7">
+          <div class="w-12 h-12 grid place-items-center rounded-xl bg-orange/20 text-orange mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19V5M4 19h16M9 16V9m5 7V6m5 10v-4"/></svg>
+          </div>
+          <h3 class="font-bold text-lg">Dados</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">BI e dashboards para decidir com clareza e otimizar cada real investido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <section id="servicos" class="relative py-24 sm:py-32 border-t border-white/5">
+    <div class="absolute left-1/2 top-0 -translate-x-1/2 w-[600px] h-[300px] bg-purple/10 blur-[120px] pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="reveal text-orange font-semibold text-sm tracking-wide uppercase mb-3">Soluções</p>
+        <h2 class="reveal text-3xl sm:text-5xl font-black tracking-tight">Tudo o que sua empresa precisa para crescer</h2>
+        <p class="reveal mt-4 text-white/60 text-lg">Do primeiro clique ao cliente fidelizado — integrado em um só lugar.</p>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Tráfego Pago -->
+        <article class="reveal glass card-hover rounded-2xl p-7 group">
+          <div class="flex items-center justify-between">
+            <div class="w-11 h-11 grid place-items-center rounded-xl bg-orange/15 text-orange">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 11l18-7-7 18-2.5-7.5L3 11z"/></svg>
+            </div>
+            <span class="text-white/20 group-hover:text-purpleHi transition text-xs font-mono">01</span>
+          </div>
+          <h3 class="mt-5 font-bold text-lg">Tráfego Pago</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Campanhas em Google e Meta com foco em ROI, leads qualificados e vendas.</p>
+        </article>
+
+        <!-- Sites -->
+        <article class="reveal glass card-hover rounded-2xl p-7 group">
+          <div class="flex items-center justify-between">
+            <div class="w-11 h-11 grid place-items-center rounded-xl bg-purple/20 text-purpleHi">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path stroke-linecap="round" d="M3 9h18M8 21h8"/></svg>
+            </div>
+            <span class="text-white/20 group-hover:text-purpleHi transition text-xs font-mono">02</span>
+          </div>
+          <h3 class="mt-5 font-bold text-lg">Criação de Sites</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Sites e landing pages premium, rápidos, responsivos e feitos para converter.</p>
+        </article>
+
+        <!-- Apps -->
+        <article class="reveal glass card-hover rounded-2xl p-7 group">
+          <div class="flex items-center justify-between">
+            <div class="w-11 h-11 grid place-items-center rounded-xl bg-purple/20 text-purpleHi">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path stroke-linecap="round" d="M11 18h2"/></svg>
+            </div>
+            <span class="text-white/20 group-hover:text-purpleHi transition text-xs font-mono">03</span>
+          </div>
+          <h3 class="mt-5 font-bold text-lg">Desenvolvimento de Apps</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Aplicativos web e mobile sob medida para escalar o seu negócio.</p>
+        </article>
+
+        <!-- CRM -->
+        <article class="reveal glass card-hover rounded-2xl p-7 group">
+          <div class="flex items-center justify-between">
+            <div class="w-11 h-11 grid place-items-center rounded-xl bg-orange/15 text-orange">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-4 4 4 0 004 4z"/></svg>
+            </div>
+            <span class="text-white/20 group-hover:text-purpleHi transition text-xs font-mono">04</span>
+          </div>
+          <h3 class="mt-5 font-bold text-lg">CRM</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Gestão de relacionamento e funil de vendas para nunca perder um lead.</p>
+        </article>
+
+        <!-- BI -->
+        <article class="reveal glass card-hover rounded-2xl p-7 group">
+          <div class="flex items-center justify-between">
+            <div class="w-11 h-11 grid place-items-center rounded-xl bg-purple/20 text-purpleHi">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19V5M4 19h16M9 16V9m5 7V6m5 10v-4"/></svg>
+            </div>
+            <span class="text-white/20 group-hover:text-purpleHi transition text-xs font-mono">05</span>
+          </div>
+          <h3 class="mt-5 font-bold text-lg">BI e Dashboards</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Indicadores em tempo real para decisões rápidas e baseadas em dados.</p>
+        </article>
+
+        <!-- Automações -->
+        <article class="reveal glass card-hover rounded-2xl p-7 group">
+          <div class="flex items-center justify-between">
+            <div class="w-11 h-11 grid place-items-center rounded-xl bg-orange/15 text-orange">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v3m0 12v3m9-9h-3M6 12H3m13.5-6.5l-2 2m-7 7l-2 2m11 0l-2-2m-7-7l-2-2"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <span class="text-white/20 group-hover:text-purpleHi transition text-xs font-mono">06</span>
+          </div>
+          <h3 class="mt-5 font-bold text-lg">Automações</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Fluxos automáticos de atendimento, vendas e marketing que trabalham por você.</p>
+        </article>
+
+        <!-- E-commerce -->
+        <article class="reveal glass card-hover rounded-2xl p-7 group">
+          <div class="flex items-center justify-between">
+            <div class="w-11 h-11 grid place-items-center rounded-xl bg-purple/20 text-purpleHi">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l2 13h10l2-8H6m1 13a1 1 0 100-2 1 1 0 000 2zm10 0a1 1 0 100-2 1 1 0 000 2z"/></svg>
+            </div>
+            <span class="text-white/20 group-hover:text-purpleHi transition text-xs font-mono">07</span>
+          </div>
+          <h3 class="mt-5 font-bold text-lg">E-commerce</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Lojas virtuais completas, integradas e otimizadas para vender mais.</p>
+        </article>
+
+        <!-- Consultoria -->
+        <article class="reveal glass card-hover rounded-2xl p-7 group">
+          <div class="flex items-center justify-between">
+            <div class="w-11 h-11 grid place-items-center rounded-xl bg-orange/15 text-orange">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2a7 7 0 00-4 12.7V17h8v-2.3A7 7 0 0012 2zM9 21h6M10 17v4m4-4v4"/></svg>
+            </div>
+            <span class="text-white/20 group-hover:text-purpleHi transition text-xs font-mono">08</span>
+          </div>
+          <h3 class="mt-5 font-bold text-lg">Consultoria Digital</h3>
+          <p class="mt-2 text-sm text-white/55 leading-relaxed">Diagnóstico estratégico e plano de ação para acelerar seu crescimento.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESSO ============ -->
+  <section id="processo" class="relative py-24 sm:py-32 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="reveal text-orange font-semibold text-sm tracking-wide uppercase mb-3">Como trabalhamos</p>
+        <h2 class="reveal text-3xl sm:text-5xl font-black tracking-tight">Um processo claro, do início ao resultado</h2>
+      </div>
+
+      <div class="mt-16 relative">
+        <div class="hidden lg:block absolute top-7 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple/50 to-transparent"></div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-5">
+          <div class="reveal relative text-center lg:text-left">
+            <div class="mx-auto lg:mx-0 w-14 h-14 grid place-items-center rounded-2xl bg-gradient-to-br from-purple to-purpleHi font-black text-lg shadow-glow relative z-10">01</div>
+            <h3 class="mt-5 font-bold text-lg">Diagnóstico</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">Entendemos seu negócio, mercado e objetivos para encontrar as maiores oportunidades.</p>
+          </div>
+          <div class="reveal relative text-center lg:text-left">
+            <div class="mx-auto lg:mx-0 w-14 h-14 grid place-items-center rounded-2xl bg-gradient-to-br from-purple to-purpleHi font-black text-lg shadow-glow relative z-10">02</div>
+            <h3 class="mt-5 font-bold text-lg">Estratégia</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">Montamos um plano sob medida unindo marketing, tecnologia e automação.</p>
+          </div>
+          <div class="reveal relative text-center lg:text-left">
+            <div class="mx-auto lg:mx-0 w-14 h-14 grid place-items-center rounded-2xl bg-gradient-to-br from-orange to-orange/70 font-black text-lg shadow-glowOrange relative z-10">03</div>
+            <h3 class="mt-5 font-bold text-lg">Execução</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">Colocamos tudo em prática com agilidade, qualidade e acompanhamento próximo.</p>
+          </div>
+          <div class="reveal relative text-center lg:text-left">
+            <div class="mx-auto lg:mx-0 w-14 h-14 grid place-items-center rounded-2xl bg-gradient-to-br from-orange to-orange/70 font-black text-lg shadow-glowOrange relative z-10">04</div>
+            <h3 class="mt-5 font-bold text-lg">Otimização</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">Analisamos os dados e melhoramos continuamente para escalar os resultados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASES ============ -->
+  <section id="cases" class="relative py-24 sm:py-32 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="max-w-xl">
+        <p class="reveal text-orange font-semibold text-sm tracking-wide uppercase mb-3">Resultados</p>
+        <h2 class="reveal text-3xl sm:text-5xl font-black tracking-tight">Cases que falam por si</h2>
+        <p class="reveal mt-4 text-white/60 text-lg">Projetos reais, resultados que crescem. O seu pode ser o próximo.</p>
+      </div>
+
+      <div class="mt-14 grid md:grid-cols-3 gap-5">
+        <!-- case 1 -->
+        <article class="reveal card-hover rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-ink2 to-ink">
+          <div class="h-40 bg-gradient-to-br from-purple/40 to-orange/20 relative">
+            <div class="absolute inset-0 grid place-items-center">
+              <span class="text-5xl font-black grad-text">+312%</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase tracking-wide text-orange font-semibold">Clínica · Saúde</span>
+            <h3 class="mt-2 font-bold text-lg">Mais agendamentos com tráfego pago</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">Aumento de 312% em agendamentos em 4 meses com campanhas segmentadas e CRM integrado.</p>
+          </div>
+        </article>
+
+        <!-- case 2 -->
+        <article class="reveal card-hover rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-ink2 to-ink">
+          <div class="h-40 bg-gradient-to-br from-orange/30 to-purple/30 relative">
+            <div class="absolute inset-0 grid place-items-center">
+              <span class="text-5xl font-black grad-text">5x</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase tracking-wide text-orange font-semibold">Imobiliária</span>
+            <h3 class="mt-2 font-bold text-lg">Funil de leads automatizado</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">5x mais leads qualificados após novo site, automação de atendimento e dashboards de BI.</p>
+          </div>
+        </article>
+
+        <!-- case 3 -->
+        <article class="reveal card-hover rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-ink2 to-ink">
+          <div class="h-40 bg-gradient-to-br from-purple/40 to-orange/20 relative">
+            <div class="absolute inset-0 grid place-items-center">
+              <span class="text-5xl font-black grad-text">-40%</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase tracking-wide text-orange font-semibold">E-commerce</span>
+            <h3 class="mt-2 font-bold text-lg">Operação enxuta e lucrativa</h3>
+            <p class="mt-2 text-sm text-white/55 leading-relaxed">Redução de 40% no custo operacional com automações e BPM, dobrando o faturamento.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="reveal mt-6 text-xs text-white/30 text-center sm:text-left">*Resultados ilustrativos baseados em projetos do segmento. Os números variam conforme o negócio.</p>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section id="sobre" class="relative py-24 sm:py-32 border-t border-white/5 overflow-hidden">
+    <div class="absolute -left-32 top-1/4 w-[420px] h-[420px] rounded-full bg-purple/15 blur-[130px] pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+      <div>
+        <p class="reveal text-orange font-semibold text-sm tracking-wide uppercase mb-3">Sobre a Agência Conf</p>
+        <h2 class="reveal text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+          Marketing e tecnologia para um crescimento <span class="text-purpleHi">sustentável</span>.
+        </h2>
+        <p class="reveal mt-6 text-white/60 text-lg leading-relaxed">
+          A Agência Conf nasceu para resolver um problema comum: empresas investem em marketing, mas a estrutura por trás não acompanha. Por isso, unimos estratégia de marketing com tecnologia, automação e dados em uma única operação.
+        </p>
+        <p class="reveal mt-4 text-white/60 text-lg leading-relaxed">
+          O resultado é um crescimento previsível e duradouro — não picos isolados. Cuidamos desde a primeira campanha até os sistemas que sustentam a sua escala.
+        </p>
+
+        <div class="reveal mt-8 grid grid-cols-2 gap-4">
+          <div class="glass rounded-xl p-4">
+            <div class="text-orange font-black text-xl">Foco em ROI</div>
+            <p class="text-sm text-white/50 mt-1">Cada ação mira retorno real.</p>
+          </div>
+          <div class="glass rounded-xl p-4">
+            <div class="text-purpleHi font-black text-xl">Visão integrada</div>
+            <p class="text-sm text-white/50 mt-1">Marketing + tech + dados.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- visual -->
+      <div class="reveal relative">
+        <div class="glass rounded-3xl p-8 shadow-glow">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple to-orange grid place-items-center font-black text-xs">Conf</div>
+            <div>
+              <div class="font-bold">Agência Conf</div>
+              <div class="text-xs text-white/40">Crescimento integrado</div>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3"><span class="w-7 h-7 rounded-lg bg-purple/25 text-purpleHi grid place-items-center text-xs">✓</span><span class="text-sm text-white/70">Estratégia de marketing & tráfego pago</span></div>
+            <div class="flex items-center gap-3"><span class="w-7 h-7 rounded-lg bg-purple/25 text-purpleHi grid place-items-center text-xs">✓</span><span class="text-sm text-white/70">Sites, apps e sistemas sob medida</span></div>
+            <div class="flex items-center gap-3"><span class="w-7 h-7 rounded-lg bg-orange/25 text-orange grid place-items-center text-xs">✓</span><span class="text-sm text-white/70">Automações e BPM</span></div>
+            <div class="flex items-center gap-3"><span class="w-7 h-7 rounded-lg bg-orange/25 text-orange grid place-items-center text-xs">✓</span><span class="text-sm text-white/70">CRM, BI e dashboards</span></div>
+          </div>
+          <div class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
+            <span class="text-sm text-white/50">Satisfação dos clientes</span>
+            <span class="font-black text-orange">98%</span>
+          </div>
+        </div>
+        <div class="absolute -bottom-5 -right-3 glass rounded-2xl px-5 py-4 animate-floaty shadow-glowOrange">
+          <div class="text-2xl font-black grad-text">3x</div>
+          <div class="text-xs text-white/50">mais leads</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="relative py-24 sm:py-32 border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-purple/30 via-ink2 to-orange/20 p-10 sm:p-16 text-center">
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-purple/30 blur-[120px] pointer-events-none"></div>
+        <div class="relative">
+          <h2 class="reveal text-3xl sm:text-5xl font-black tracking-tight leading-tight max-w-2xl mx-auto">
+            Sua empresa está pronta para crescer no digital?
+          </h2>
+          <p class="reveal mt-5 text-white/70 text-lg max-w-xl mx-auto">
+            Receba um diagnóstico gratuito e descubra exatamente onde estão suas maiores oportunidades de crescimento.
+          </p>
+          <div class="reveal mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://wa.me/5517997375384?text=Ol%C3%A1!%20Quero%20meu%20diagn%C3%B3stico%20gratuito%20com%20a%20Ag%C3%AAncia%20Conf."
+               target="_blank" rel="noopener"
+               class="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white text-ink px-8 py-4 font-bold hover:-translate-y-0.5 transition shadow-xl">
+              <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.516 5.26l-.999 3.648 3.973-1.087z"/></svg>
+              Mandar mensagem
+            </a>
+            <span class="text-sm text-white/50">Resposta em até 24h · Sem compromisso</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="border-t border-white/10 bg-ink2/60">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-14">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-2 max-w-sm">
+          <a href="#hero" class="flex items-center gap-2.5">
+            <img src="logo.svg" alt="Conf" class="w-9 h-9 rounded-xl" />
+            <span class="font-extrabold text-lg">Agência <span class="text-purpleHi">Conf</span></span>
+          </a>
+          <p class="mt-4 text-white/55 text-sm leading-relaxed">Marketing e tecnologia que geram crescimento sustentável para pequenas e médias empresas.</p>
+          <p class="mt-4 flex items-center gap-2 text-white/60 text-sm">
+            <svg class="w-4 h-4 text-orange" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            São José do Rio Preto · SP
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-4">Navegação</h4>
+          <ul class="space-y-2.5 text-sm text-white/55">
+            <li><a href="#servicos" class="hover:text-orange transition">Serviços</a></li>
+            <li><a href="#processo" class="hover:text-orange transition">Processo</a></li>
+            <li><a href="#cases" class="hover:text-orange transition">Cases</a></li>
+            <li><a href="#sobre" class="hover:text-orange transition">Sobre</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-4">Contato</h4>
+          <ul class="space-y-3 text-sm text-white/55">
+            <li>
+              <a href="https://wa.me/5517997375384" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-orange transition">
+                <svg class="w-4 h-4 text-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.516 5.26l-.999 3.648 3.973-1.087z"/></svg>
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/agencia.conf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-orange transition">
+                <svg class="w-4 h-4 text-purpleHi" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                @agencia.conf
+              </a>
+            </li>
+            <li>
+              <a href="mailto:agencia.confia1@gmail.com" class="inline-flex items-center gap-2 hover:text-orange transition">
+                <svg class="w-4 h-4 text-purpleHi" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path stroke-linecap="round" d="M3 7l9 6 9-6"/></svg>
+                agencia.confia1@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
+        <p>© <span id="year"></span> Agência Conf. Todos os direitos reservados.</p>
+        <p>Marketing · Tecnologia · Automação · Dados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ CHAT WIDGET ============ -->
+  <button id="chatToggle" class="conf-chat-btn inline-flex items-center gap-2 rounded-full bg-white text-ink px-4 py-2 shadow-lg font-semibold">Chat</button>
+
+  <div id="chatPanel" class="conf-chat-panel glass rounded-xl p-0 shadow-xl">
+    <div class="flex items-center justify-between px-4 py-3 border-b border-white/8">
+      <div class="font-bold">Assistente Conf</div>
+      <button id="chatClose" class="text-white/70 hover:text-white">✕</button>
+    </div>
+    <div id="chatMessages" class="conf-chat-messages bg-ink p-3 text-sm text-white/85"></div>
+    <div id="chatQuickBtns" class="conf-quick-btns">
+      <button type="button" class="conf-quick-btn" data-question="Quais serviços vocês oferecem?">Serviços</button>
+      <button type="button" class="conf-quick-btn" data-question="Vocês atendem minha região?">Cobertura</button>
+      <button type="button" class="conf-quick-btn" data-question="Como funciona o diagnóstico gratuito?">Diagnóstico</button>
+      <button type="button" class="conf-quick-btn" data-question="Qual é o valor?">Preço</button>
+    </div>
+    <form id="chatForm" class="flex gap-2 items-center p-3 border-t border-white/6">
+      <input id="chatInput" class="flex-1 rounded-full bg-white/5 px-4 py-2 text-sm outline-none" placeholder="Escreva sua pergunta..." />
+      <button type="submit" class="inline-flex items-center gap-2 rounded-full bg-purple px-4 py-2 text-white font-semibold">Enviar</button>
+    </form>
+  </div>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Navbar background on scroll
+    const nav = document.getElementById('nav');
+    const onScroll = () => {
+      if (window.scrollY > 20) nav.classList.add('bg-ink/80','backdrop-blur-xl','border-b','border-white/10');
+      else nav.classList.remove('bg-ink/80','backdrop-blur-xl','border-b','border-white/10');
+    };
+    window.addEventListener('scroll', onScroll); onScroll();
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link').forEach(a =>
+      a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+
+    // stagger siblings slightly
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i % 6) * 60 + 'ms';
+      io.observe(el);
+    });
+  </script>
+  
+  <script>
+    (function(){
+      const responses = [
+        {keywords:['oi','olá','ola','bom dia','boa tarde','boa noite','olá!'], answer:'Olá! Atendemos todos os tipos de negócios locais e e‑commerces. Atuamos em São José do Rio Preto e região. Como podemos ajudar? Pergunte sobre serviços, diagnóstico gratuito ou contato.'},
+        {keywords:['serviço','servicos','o que fazem','serviços que'], answer:'Oferecemos Tráfego Pago, Criação de Sites, Desenvolvimento de Apps, CRM, BI e Dashboards, Automações, E-commerce e Consultoria Digital.'},
+        {keywords:['preço','custo','valor','pacote','quanto'], answer:'Nossos preços variam conforme o escopo do projeto. Recomendo agendarmos um diagnóstico gratuito para avaliarmos suas necessidades e passarmos uma proposta.'},
+        {keywords:['diagnóstico','diagnostico','diagnosticar','diagnóstico gratuito'], answer:'Sim — oferecemos diagnóstico gratuito. Podemos marcar uma conversa pelo WhatsApp ou por e‑mail para alinhar o escopo.'},
+        {keywords:['contato','telefone','whatsapp','email','falar'], answer:'Você pode usar o botão "WhatsApp" no topo, enviar e‑mail para agencia.confia1@gmail.com, ou pedir aqui que eu gere um link de contato.'},
+        {keywords:['região','são josé','são josé do rio preto','rio preto'], answer:'Atendemos São José do Rio Preto e região, além de projetos de e‑commerce que atuam nacionalmente.'}
+      ];
+
+      const chatToggle = document.getElementById('chatToggle');
+      const chatPanel = document.getElementById('chatPanel');
+      const chatClose = document.getElementById('chatClose');
+      const chatForm = document.getElementById('chatForm');
+      const chatInput = document.getElementById('chatInput');
+      const chatMessages = document.getElementById('chatMessages');
+
+      function addMessage(role,text){
+        const el = document.createElement('div');
+        el.className = 'conf-msg ' + (role==='user' ? 'user' : 'bot');
+        el.textContent = text;
+        const wrapper = document.createElement('div');
+        wrapper.style.marginBottom='8px';
+        if(role==='user'){ wrapper.style.textAlign='right'; }
+        wrapper.appendChild(el);
+        chatMessages.appendChild(wrapper);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      function findResponse(text){
+        const t = text.toLowerCase();
+        for(const r of responses){
+          for(const k of r.keywords){
+            if(t.includes(k)) return r.answer;
+          }
+        }
+        return 'Desculpe, não entendi. Tente outra pergunta ou use o WhatsApp para falar com a equipe.';
+      }
+
+      chatToggle.addEventListener('click', ()=>{ chatPanel.classList.toggle('open'); chatToggle.blur(); });
+      chatClose.addEventListener('click', ()=> chatPanel.classList.remove('open'));
+      chatForm.addEventListener('submit', (e)=>{ 
+        e.preventDefault(); 
+        const v = chatInput.value.trim(); 
+        if(!v) return; 
+        addMessage('user', v); 
+        chatInput.value=''; 
+        setTimeout(()=>{ 
+          addMessage('bot','...'); 
+          setTimeout(()=>{ chatMessages.lastChild.querySelector('.conf-msg').textContent = findResponse(v); }, 600);
+        }, 300);
+      });
+
+      chatToggle.addEventListener('click', ()=>{
+        setTimeout(()=>{
+          if(chatMessages.children.length===0) addMessage('bot','Olá! Sou um assistente automático. Pergunte algo ou use WhatsApp para falar com a equipe.');
+        }, 250);
+      });
+
+      const quickBtns = document.querySelectorAll('.conf-quick-btn');
+      quickBtns.forEach(btn => {
+        btn.addEventListener('click', (e)=>{
+          const q = e.target.getAttribute('data-question');
+          if(q) {
+            chatInput.value = q;
+            chatForm.dispatchEvent(new Event('submit'));
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- Rastreamento de conversão (Meta Pixel): clique em WhatsApp/e-mail = Lead -->
+  <script>
+    (function(){
+      function track(label){
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', { content_name: label });
+        }
+      }
+      document.querySelectorAll('a[href*="wa.me"], a[href^="https://wa.me"]').forEach(function(a){
+        a.addEventListener('click', function(){ track('whatsapp'); });
+      });
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+        a.addEventListener('click', function(){ track('email'); });
+      });
+    })();
+  </script>
+</body>
+</html>

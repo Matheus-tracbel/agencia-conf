@@ -1,0 +1,41 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0B0B"/>
+      <stop offset="100%" stop-color="#14102b"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#c4b5fd"/>
+      <stop offset="75%" stop-color="#8B5CF6"/>
+      <stop offset="110%" stop-color="#FF7A00"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#6C2BD9" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#6C2BD9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Logo: barras crescentes -->
+  <g transform="translate(90,210)">
+    <rect x="0"   y="120" width="34" height="90"  rx="6" fill="#8B5CF6"/>
+    <rect x="48"  y="78"  width="34" height="132" rx="6" fill="#6366F1"/>
+    <rect x="96"  y="48"  width="34" height="162" rx="6" fill="#A78BFA"/>
+    <rect x="144" y="18"  width="34" height="192" rx="6" fill="#4F46E5"/>
+    <rect x="192" y="-12" width="34" height="222" rx="6" fill="#C4B5FD"/>
+  </g>
+
+  <!-- Texto -->
+  <text x="90" y="150" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800" fill="#ffffff" letter-spacing="2">AGÊNCIA CONF</text>
+
+  <text x="430" y="280" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="900" fill="url(#grad)">Marketing + Tecnologia</text>
+  <text x="430" y="345" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="900" fill="#ffffff">para o seu crescimento</text>
+
+  <text x="430" y="415" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="500" fill="#b9b9c6">Tráfego Pago · Tecnologia · Automação · Dados</text>
+
+  <rect x="430" y="465" width="310" height="60" rx="30" fill="#FF7A00"/>
+  <text x="585" y="503" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#0B0B0B" text-anchor="middle">Diagnóstico gratuito</text>
+</svg>

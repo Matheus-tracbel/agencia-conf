@@ -1,0 +1,13 @@
+# Backups e temporários (não vão para o site)
+index.html.backup
+*.backup
+*.bak
+
+# Node (usado só localmente para gerar a og-image)
+node_modules/
+package.json
+package-lock.json
+
+# Sistema
+.DS_Store
+Thumbs.db
