@@ -776,9 +776,10 @@
       <div class="mt-12 grid md:grid-cols-2 gap-5">
         <!-- Matheus Cruz -->
         <article class="reveal glass card-hover rounded-2xl p-7 sm:p-8">
-          <!-- Para usar foto: troque o <div> das iniciais por <img src="equipe/matheus.jpg" alt="Matheus Cruz" class="w-16 h-16 rounded-2xl object-cover shrink-0" /> -->
           <div class="flex items-center gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple to-purpleHi grid place-items-center font-black text-xl shrink-0">MC</div>
+            <!-- Salve a foto do Matheus como equipe/matheus.jpg. Enquanto o arquivo não existir, aparecem as iniciais "MC". -->
+            <img src="equipe/matheus.jpg" alt="Matheus Cruz, fundador da Agência Conf" loading="lazy" class="w-16 h-16 rounded-2xl object-cover object-top shrink-0" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple to-purpleHi grid place-items-center font-black text-xl shrink-0" style="display:none">MC</div>
             <div>
               <h4 class="font-bold text-lg">Matheus Cruz</h4>
               <p class="text-sm text-orange font-semibold">Fundador da Agência Conf</p>
