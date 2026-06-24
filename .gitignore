@@ -3,10 +3,8 @@ index.html.backup
 *.backup
 *.bak
 
-# Node (usado só localmente para gerar a og-image)
+# Dependências do build (não vão para o site; instale com "npm install")
 node_modules/
-package.json
-package-lock.json
 
 # Sistema
 .DS_Store

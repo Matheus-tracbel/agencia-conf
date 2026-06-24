@@ -57,38 +57,8 @@
   </script>
   <!-- End Google Analytics 4 -->
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink:    '#0B0B0B',
-            ink2:   '#111114',
-            purple: '#6C2BD9',
-            purpleHi:'#8B5CF6',
-            orange: '#FF7A00',
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-          boxShadow: {
-            glow: '0 0 60px -15px rgba(108,43,217,0.55)',
-            glowOrange: '0 0 50px -15px rgba(255,122,0,0.45)',
-          },
-          keyframes: {
-            floaty: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
-            shine:  { '0%': { backgroundPosition: '0% 50%' }, '100%': { backgroundPosition: '200% 50%' } },
-          },
-          animation: {
-            floaty: 'floaty 6s ease-in-out infinite',
-            shine:  'shine 6s linear infinite',
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind CSS (compilado e minificado — gerado a partir de src/input.css) -->
+  <link rel="stylesheet" href="assets/tailwind.css" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -553,7 +523,7 @@
             </div>
           </div>
           <div class="p-6">
-            <span class="text-xs uppercase tracking-wide text-orange font-semibold">Imobiliária</span>
+            <span class="text-xs uppercase tracking-wide text-orange font-semibold">Comércio local</span>
             <h3 class="mt-2 font-bold text-lg">Funil de leads automatizado</h3>
             <p class="mt-2 text-sm text-white/55 leading-relaxed">5x mais leads qualificados após novo site, automação de atendimento e dashboards de BI.</p>
           </div>
@@ -588,38 +558,102 @@
       </p>
 
       <!--
-        Clientes reais da Conf. Quando tiver os logos, troque o <span> por:
-        <img src="clientes/nome.png" alt="Nome" class="max-h-10" />
+        Logos dos clientes. Salve cada arquivo na pasta "clientes/" com o nome exato abaixo
+        (de preferência PNG com fundo transparente). Enquanto o arquivo não existir,
+        aparece o nome em texto automaticamente.
       -->
       <div class="reveal mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">Veneza Pizzaria</span></div>
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">Conceito Beer</span></div>
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">Chicago Pizzaria</span></div>
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">Meu Canto<br>Casa do Espeto</span></div>
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">Beach Pet Store</span></div>
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">World Car</span></div>
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">Victorine</span></div>
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">Villa Maria Pub</span></div>
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">Delany Lingerie</span></div>
-        <div class="glass rounded-xl h-24 flex items-center justify-center px-4"><span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight">Imobiliária<br><span class="text-white/40 text-xs font-medium">(parceria)</span></span></div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/venezza.png" alt="Venezza Pizzaria" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">Venezza Pizzaria</span>
+        </div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/conceito-beer.png" alt="Conceito Beer" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">Conceito Beer</span>
+        </div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/chicago.png" alt="Chicago Pizzaria" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">Chicago Pizzaria</span>
+        </div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/meu-canto.png" alt="Meu Canto Casa do Espeto" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">Meu Canto<br>Casa do Espeto</span>
+        </div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/beach-pet.png" alt="Beach Pet Store" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">Beach Pet Store</span>
+        </div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/world-car.png" alt="World Car" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">World Car</span>
+        </div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/victorine.png" alt="Victorine" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">Victorine</span>
+        </div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/villa-maria.png" alt="Villa Maria Pub" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">Villa Maria Pub</span>
+        </div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/delany.png" alt="Delany Lingerie" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">Delany Lingerie</span>
+        </div>
+        <div class="glass rounded-xl h-24 flex items-center justify-center p-3">
+          <img src="clientes/le-penariol.png" alt="Le Penariol" loading="lazy" class="max-h-16 max-w-[85%] object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-extrabold text-base text-white/70 tracking-tight text-center leading-tight" style="display:none">Le Penariol</span>
+        </div>
       </div>
 
-      <!-- Depoimento / prova social -->
-      <div class="reveal mt-10 max-w-3xl mx-auto glass rounded-2xl p-8 text-left">
-        <div class="flex gap-1 text-orange mb-4" aria-hidden="true">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-        <p class="text-lg text-white/80 leading-relaxed">
-          "<span class="text-white">Depoimento de cliente aqui.</span> Conte em 1 ou 2 frases o resultado que a empresa teve trabalhando com a Conf — é a prova social que mais converte."
-        </p>
-        <div class="mt-5 flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple to-orange grid place-items-center font-black text-sm">C</div>
-          <div>
-            <div class="font-semibold text-sm">Nome do cliente</div>
-            <div class="text-xs text-white/45">Cargo · Empresa</div>
-          </div>
-        </div>
+      <!-- Depoimentos / prova social -->
+      <h3 class="reveal mt-20 text-2xl sm:text-3xl font-black tracking-tight">O que dizem nossos clientes</h3>
+      <div class="mt-10 grid md:grid-cols-3 gap-5">
+        <!-- Depoimento 1 -->
+        <figure class="reveal glass card-hover rounded-2xl p-7 text-left flex flex-col">
+          <div class="flex gap-1 text-orange mb-4" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <blockquote class="text-[15px] text-white/75 leading-relaxed flex-1">
+            "Em menos de 4 meses aumentamos em 42% o número de leads recebidos e dobramos a quantidade de orçamentos fechados. O trabalho da Conf trouxe clareza, estratégia e resultado."
+          </blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple to-purpleHi grid place-items-center font-black text-sm shrink-0">★</div>
+            <div>
+              <div class="font-semibold text-sm">Cliente Conf</div>
+              <div class="text-xs text-white/45">Setor comercial · Serviços</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <!-- Depoimento 2 -->
+        <figure class="reveal glass card-hover rounded-2xl p-7 text-left flex flex-col">
+          <div class="flex gap-1 text-orange mb-4" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <blockquote class="text-[15px] text-white/75 leading-relaxed flex-1">
+            "A organização que a Conf trouxe para nossa empresa fez toda a diferença. Hoje temos processos muito mais claros, informações centralizadas e acompanhamos os resultados de forma muito mais profissional e eficiente."
+          </blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange to-orange/70 grid place-items-center font-black text-sm shrink-0">★</div>
+            <div>
+              <div class="font-semibold text-sm">Cliente Conf</div>
+              <div class="text-xs text-white/45">Gestão e processos</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <!-- Depoimento 3 -->
+        <figure class="reveal glass card-hover rounded-2xl p-7 text-left flex flex-col">
+          <div class="flex gap-1 text-orange mb-4" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <blockquote class="text-[15px] text-white/75 leading-relaxed flex-1">
+            "Nossa pizzaria tinha movimento só nos horários de pico. Com as campanhas e a estrutura criada pela Conf, passamos a receber pedidos durante todo o dia e aumentamos o faturamento mensal de forma consistente."
+          </blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple to-orange grid place-items-center font-black text-sm shrink-0">★</div>
+            <div>
+              <div class="font-semibold text-sm">Cliente Conf</div>
+              <div class="text-xs text-white/45">Segmento de alimentação</div>
+            </div>
+          </figcaption>
+        </figure>
       </div>
+      <p class="reveal mt-6 text-xs text-white/30">Depoimentos de clientes atendidos pela Conf, identificados por segmento.</p>
     </div>
   </section>
 

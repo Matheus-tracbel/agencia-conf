@@ -1,0 +1,25 @@
+{
+  "name": "agencia-conf",
+  "version": "1.0.0",
+  "description": "Site institucional/landing page estático da **Agência Conf** (Marketing + Tecnologia).",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matheus-tracbel/agencia-conf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Matheus-tracbel/agencia-conf/issues"
+  },
+  "homepage": "https://github.com/Matheus-tracbel/agencia-conf#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
