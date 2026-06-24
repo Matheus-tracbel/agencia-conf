@@ -169,51 +169,103 @@
     <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[820px] h-[820px] rounded-full bg-purple/25 blur-[140px] pointer-events-none"></div>
     <div class="absolute top-40 -right-32 w-[420px] h-[420px] rounded-full bg-orange/15 blur-[120px] pointer-events-none"></div>
 
-    <div class="relative max-w-7xl mx-auto px-5 sm:px-8 text-center">
-      <div class="reveal inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs sm:text-sm text-white/70 mb-8">
-        <span class="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
-        Marketing + Tecnologia + Automação + Dados
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+
+        <!-- Coluna esquerda: oferta + CTAs -->
+        <div class="text-center lg:text-left">
+          <div class="reveal inline-flex items-center gap-2 rounded-full border border-orange/30 bg-orange/10 px-4 py-1.5 text-xs sm:text-sm text-orange font-semibold mb-6">
+            <span class="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
+            1ª conversa 100% gratuita · Sem compromisso
+          </div>
+
+          <h1 class="reveal text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
+            A estrutura digital <span class="grad-text animate-shine">completa</span> para a sua empresa vender todos os dias.
+          </h1>
+
+          <p class="reveal mt-5 text-base sm:text-lg text-white/60 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Marketing, site, CRM, automação e dados — montados, integrados e com <span class="text-white">treinamento e suporte 100%</span> para a sua equipe. Tudo em um só lugar.
+          </p>
+
+          <!-- bullets de oferta -->
+          <ul class="reveal mt-7 space-y-3 text-left max-w-xl mx-auto lg:mx-0">
+            <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-lg bg-orange/20 text-orange grid place-items-center text-xs shrink-0 mt-0.5">✓</span><span class="text-sm sm:text-[15px] text-white/75">Tráfego pago trazendo clientes todos os dias no Google e no Instagram</span></li>
+            <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-lg bg-purple/25 text-purpleHi grid place-items-center text-xs shrink-0 mt-0.5">✓</span><span class="text-sm sm:text-[15px] text-white/75">Site, CRM e automação prontos para vender por você 24h por dia</span></li>
+            <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-lg bg-orange/20 text-orange grid place-items-center text-xs shrink-0 mt-0.5">✓</span><span class="text-sm sm:text-[15px] text-white/75">Treinamento e suporte 100% — a gente não te deixa na mão</span></li>
+            <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-lg bg-purple/25 text-purpleHi grid place-items-center text-xs shrink-0 mt-0.5">✓</span><span class="text-sm sm:text-[15px] text-white/75">Você acompanha cada resultado por dados, sem achismo</span></li>
+          </ul>
+
+          <!-- CTAs -->
+          <div class="reveal mt-9 flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-3">
+            <a href="https://wa.me/5517997375384?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20uma%20conversa%20gratuita%20sobre%20a%20estrutura%20digital%20completa%20da%20Ag%C3%AAncia%20Conf."
+               target="_blank" rel="noopener"
+               class="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple to-purpleHi px-7 py-4 font-semibold text-white shadow-glow hover:shadow-[0_0_70px_-10px_rgba(108,43,217,0.8)] hover:-translate-y-0.5 transition-all">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.516 5.26l-.999 3.648 3.973-1.087z"/></svg>
+              Falar agora no WhatsApp
+            </a>
+            <a href="https://wa.me/5517997375384?text=Ol%C3%A1!%20Quero%20agendar%20meu%20diagn%C3%B3stico%20gratuito%20com%20a%20Ag%C3%AAncia%20Conf."
+               target="_blank" rel="noopener"
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-4 font-semibold text-white hover:bg-white/10 hover:-translate-y-0.5 transition-all">
+              Agendar diagnóstico gratuito
+            </a>
+          </div>
+          <p class="reveal mt-4 text-sm text-white/45 text-center lg:text-left">Grátis · cerca de 30 min · resposta em até 24h</p>
+        </div>
+
+        <!-- Coluna direita: card da oferta -->
+        <div class="reveal relative">
+          <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-orange/15 blur-[100px] pointer-events-none"></div>
+          <div class="relative glass rounded-3xl p-7 sm:p-8 shadow-glow">
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-orange font-semibold">O que está incluso</p>
+                <h3 class="font-black text-xl mt-1">Estrutura Digital Completa</h3>
+              </div>
+              <div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-purple to-orange grid place-items-center font-black text-xs">Conf</div>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-lg bg-purple/25 text-purpleHi grid place-items-center text-xs shrink-0">✓</span><span class="text-sm text-white/75">Tráfego pago (Google + Meta)</span></li>
+              <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-lg bg-purple/25 text-purpleHi grid place-items-center text-xs shrink-0">✓</span><span class="text-sm text-white/75">Site / landing de alta conversão</span></li>
+              <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-lg bg-purple/25 text-purpleHi grid place-items-center text-xs shrink-0">✓</span><span class="text-sm text-white/75">CRM + Sistema de Gestão</span></li>
+              <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-lg bg-orange/20 text-orange grid place-items-center text-xs shrink-0">✓</span><span class="text-sm text-white/75">Automação de atendimento e vendas</span></li>
+              <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-lg bg-orange/20 text-orange grid place-items-center text-xs shrink-0">✓</span><span class="text-sm text-white/75">Treinamento da sua equipe</span></li>
+              <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-lg bg-orange/20 text-orange grid place-items-center text-xs shrink-0">✓</span><span class="text-sm text-white/75">Suporte 100%, do início ao resultado</span></li>
+            </ul>
+            <div class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
+              <span class="text-sm text-white/55">Comece com um</span>
+              <span class="font-black text-orange">Diagnóstico grátis</span>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-3 glass rounded-2xl px-4 py-3 animate-floaty shadow-glowOrange">
+            <div class="text-[11px] text-white/50">Treinamento + Suporte</div>
+            <div class="text-lg font-black grad-text">100% incluso</div>
+          </div>
+        </div>
+
       </div>
 
-      <h1 class="reveal text-4xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight max-w-4xl mx-auto">
-        Sua empresa crescendo de verdade no <span class="grad-text animate-shine">digital</span>.
-      </h1>
-
-      <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
-        Unimos tráfego pago, tecnologia, automação e dados para transformar o digital da sua empresa em uma máquina previsível de crescimento e resultados.
-      </p>
-
-      <div class="reveal mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://wa.me/5517997375384?text=Ol%C3%A1!%20Quero%20solicitar%20um%20diagn%C3%B3stico%20gratuito."
-           target="_blank" rel="noopener"
-           class="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple to-purpleHi px-8 py-4 font-semibold text-white shadow-glow hover:shadow-[0_0_70px_-10px_rgba(108,43,217,0.8)] hover:-translate-y-0.5 transition-all">
-          Solicitar Diagnóstico
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
-        </a>
-      </div>
-
-      <!-- stat strip -->
-      <div class="reveal mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/10">
-        <div class="bg-white/[0.03] p-5">
-          <div class="text-2xl sm:text-3xl font-black text-white">+120</div>
-          <div class="text-xs text-white/50 mt-1">Projetos entregues</div>
+      <!-- stat strip (honesto) -->
+      <div class="reveal mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10">
+        <div class="bg-white/[0.03] p-5 text-center sm:text-left">
+          <div class="text-2xl sm:text-3xl font-black text-orange">Grátis</div>
+          <div class="text-xs text-white/50 mt-1">Diagnóstico inicial</div>
         </div>
-        <div class="bg-white/[0.03] p-5">
-          <div class="text-2xl sm:text-3xl font-black text-purpleHi">9</div>
-          <div class="text-xs text-white/50 mt-1">Soluções integradas</div>
+        <div class="bg-white/[0.03] p-5 text-center sm:text-left">
+          <div class="text-2xl sm:text-3xl font-black text-white">100%</div>
+          <div class="text-xs text-white/50 mt-1">Suporte e treinamento</div>
         </div>
-        <div class="bg-white/[0.03] p-5">
-          <div class="text-2xl sm:text-3xl font-black text-orange">3x</div>
-          <div class="text-xs text-white/50 mt-1">Mais leads em média</div>
+        <div class="bg-white/[0.03] p-5 text-center sm:text-left">
+          <div class="text-2xl sm:text-3xl font-black text-purpleHi">4 em 1</div>
+          <div class="text-xs text-white/50 mt-1">Mkt + Tech + Automação + Dados</div>
         </div>
-        <div class="bg-white/[0.03] p-5">
+        <div class="bg-white/[0.03] p-5 text-center sm:text-left">
           <div class="text-2xl sm:text-3xl font-black text-white">24h</div>
-          <div class="text-xs text-white/50 mt-1">Para te responder</div>
+          <div class="text-xs text-white/50 mt-1">Resposta no WhatsApp</div>
         </div>
       </div>
 
       <!-- brand row -->
-      <p class="reveal mt-14 text-xs uppercase tracking-[0.25em] text-white/30">Ecossistema de tecnologia que usamos</p>
+      <p class="reveal mt-14 text-xs uppercase tracking-[0.25em] text-white/30 text-center">Ecossistema de tecnologia que usamos</p>
       <div class="reveal mt-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-white/40 font-semibold text-sm">
         <span>Google Ads</span><span>Meta</span><span>HubSpot</span><span>Power BI</span><span>n8n</span><span>Shopify</span>
       </div>
